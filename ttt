@@ -5215,7 +5215,7 @@ local Library = {
         end
 
         Library.InitWindow = function(Self)
-            local SettingsPage = Self:Page({Name = "Settings"})
+            local SettingsPage = Self:Page({Name = "settings"})
 
             local GeneralSubPage = SettingsPage:SubPage({Name = "General"})
 
@@ -5353,7 +5353,7 @@ local Library = {
                 UISettingsSection:Label({Name = "Menu Bind"}):Keybind({
                     Flag = "MenuBind",
                     Mode = "Toggle",
-                    Default = Enum.KeyCode.RightShift,
+                    Default = Enum.KeyCode.LeftControl,
                     Callback = function()
                         Library.MenuKeybind = Flags["MenuBind"].Key
                     end
